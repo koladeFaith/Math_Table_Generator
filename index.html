@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MATH TABLES</title>
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+      <h1>Maths table</h1>
+    <div class="container">
+      <div class="container-2">
+        <input type="number" placeholder="Column" class="inputData" id="column"/>
+        <input type="number" placeholder="Row" class="inputData" id="row" />
+
+        <select name="" id="operation" class="arithmetic">
+          <option value="">Addition</option>
+          <option value="">Subtraction</option>
+          <option value="">Multiplication</option>
+          <option value="">Division</option>
+        </select>
+        <button class="generate" onclick="generateTable()">Generate</button>
+      </div>
+      <div class="showAnswer" id="showAnswer"></div>
+    </div>
+    <!-- JAVASCRIPT STYLING -->
+    <script src="script.js"></script>
+  </body>
+</html>
