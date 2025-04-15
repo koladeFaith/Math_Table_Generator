@@ -5,15 +5,32 @@
 }
 body {
   margin-inline: 20px;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #1e3c72, #2a5298, #1e3c72, #0f2027);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 .container {
   margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* gap: 40px; */
   margin-inline: auto;
   width: 100%;
+  position: relative;
 }
 .container-2 {
   display: grid;
@@ -24,10 +41,9 @@ h1 {
   text-transform: uppercase;
   color: black;
   font-weight: bolder;
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
   margin-top: 20px;
-
 }
 .inputData {
   padding: 5px 5px;
@@ -50,7 +66,38 @@ h1 {
   background-color: crimson;
   font-size: 18px;
 }
+.showAnswer {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+}
+input,
+select,
+button {
+  margin: 5px;
+  padding: 5px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 50px;
 
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+td,
+th {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-weight: 500;
+}
 @media (min-width: 768px) {
   .container-2 {
     grid-template-columns: repeat(4, 1fr);
@@ -66,5 +113,9 @@ h1 {
   }
   .generate {
     font-size: 24px;
+  }
+  .showAnswer {
+    position: absolute;
+    left: 10%;
   }
 }
